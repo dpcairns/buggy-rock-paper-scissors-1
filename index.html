@@ -27,29 +27,33 @@
         <label>
             Rock
             <input name="user-options" value="rock" type="radio">
-            <img id="rock" class="radio-image" src="https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/4/4e/Johnson.jpg/revision/latest?cb=20160625153352">
+            <!-- <img id="rock" class="radio-image" src="../assets/rock.jpg"> -->
         </label>
         <label>
             Scissors
             <input name="user-options" value="scissors" type="radio">
-            <img id="scissors" class="radio-image" src="https://images.ctfassets.net/f1fikihmjtrp/6Ftd6CNnz6v4UPsVvO1hUx/4423540ed7750a4715b91f2cf3dce8fe/57665-1006-1-4ww.jpg">
+            <!-- <img id="scissors" class="radio-image" src="../assets/scissors.jpg"> -->
         </label>
         <label>
             Paper
             <input name="user-options" value="paper" type="radio">
-            <img id="paper" class="radio-image" src="https://365psd.com/images/previews/289/blank-paper-sheet-vector-free-33951.jpg">    
+            <!-- <img id="paper" class="radio-image" src="../assets/paper.jpg">     -->
         </label>
     </section>
     <button id="submit-button">Play</button>
-    <section class="outcomes">
-        <summary id="user-summary" class="hidden">You threw: <span id="user-choice"></span></summary>
-        <summary id="computer-summary" class="hidden">Computer threw: <span id="computer-choice"></span></summary>
-        <summary id="result" class="hidden"></summary>
-        <summary id="total-wins">Wins: </summary>
-        <summary>Wins: <span id="user-wins"></span></summary>
-        <summary>Losses: <span id="computer-wins"></span></summary>
-        <summary>Draws: <span id="draws"></span></summary>
-    </section>
+    <div class="results-box">
+        <section id="results-visibility" class="hidden">
+            <h2>Results</h2>
+            <h3 id="user-summary">You threw: </h3><img id="user-choice" src="">
+            <h3 id="computer-summary">Computer threw: </h3>
+            <img id="computer-choice" src=""></img>
+            <h3 id="throw-result"></h3>
+            <h3>Totals: </h3>
+            <p>Wins: <span id="wins-count"></span></p>
+            <p>Losses: <span id="loss-count"></span></p>
+            <p>Draws: <span id="draws-count"></span></p>
+        </section>
+    </div>
     <script type="module" src="app.js"></script>
 </body>
 </html>
