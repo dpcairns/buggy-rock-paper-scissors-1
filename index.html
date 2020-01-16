@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+    </header>
+    <section>
+        <h2>Rules</h2>
+        <ul>
+            <li>Rock beats scissors</li>
+            <li>Scissors beats paper</li>
+            <li>Paper beats rock</li>
+        </ul>
+        <p>Can you beat the computer?</p>
+    </section>
+    <h2>Make a selection</h2>
+    <section class="user-options">
+        <label>
+            Rock
+            <input name="user-options" value="rock" type="radio">
+            <img id="rock" class="radio-image" src="https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/4/4e/Johnson.jpg/revision/latest?cb=20160625153352">
+        </label>
+        <label>
+            Scissors
+            <input name="user-options" value="scissors" type="radio">
+            <img id="scissors" class="radio-image" src="https://images.ctfassets.net/f1fikihmjtrp/6Ftd6CNnz6v4UPsVvO1hUx/4423540ed7750a4715b91f2cf3dce8fe/57665-1006-1-4ww.jpg">
+        </label>
+        <label>
+            Paper
+            <input name="user-options" value="paper" type="radio">
+            <img id="paper" class="radio-image" src="https://365psd.com/images/previews/289/blank-paper-sheet-vector-free-33951.jpg">    
+        </label>
+    </section>
+    <button id="submit">Play</button>
+    <section class="outcomes">
+        <summary id="user-summary" class="hidden">You threw: <span id="user-choice"></span></summary>
+        <summary id="computer-summary" class="hidden">Computer threw: <span id="computer-choice"></span></summary>
+        <summary id="result" class="hidden"></summary>
+        <summary id="total-wins">Wins: </summary>
+        <summary>Wins: <span id="user-wins"></span></summary>
+        <summary>Losses: <span id="computer-wins"></span></summary>
+        <summary>Draws: <span id="draws"></span></summary>
+    </section>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
