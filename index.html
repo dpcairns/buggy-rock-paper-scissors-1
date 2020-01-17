@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <header>
+        <h1>Rock<br>Paper<br>Scissors</h1>
+    </header>
+    <section class="instructions">
+        <h2 class="instructions">Can you beat the computer?</h2>
+        <ul class=instructions>
+            <li>Rock beats scissors</li>
+            <li>Scissors beats paper</li>
+            <li>Paper beats rock</li>
+        </ul>
+        <button class="instructions" id="submit-button">Play the game</button><br>
+        <label class="instructions">
+            Rock
+            <input name="instructions" value="rock" type="radio">
+        </label>
+        <label class="instructions">
+            Paper
+            <input name="instructions" value="paper" type="radio">
+        </label>
+        <label class="instructions">
+            Scissors
+            <input name="instructions" value="scissors" type="radio">
+        </label>
+    </section>
+        <p id="throw-result"></p>
+    </section>
+    <section id="results-box">
+        <span class="throw-summaries" id="user-summary">You threw: </span><img id="user-throw" class="image" src="">
+        <span class="throw-summaries" id="computer-summary">Computer threw: </span>
+        <img id="computer-throw" class="image" src=""></img><br>
+        <div class="win-loss-counts-section">
+            <span class="win-loss-counts">Wins: <span id="wins-count"></span></span>
+            <span class="win-loss-counts">Losses: <span id="loss-count"></span></span>
+            <span class="win-loss-counts">Draws: <span id="draws-count"></span></span>
+        </div>
+    </section>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

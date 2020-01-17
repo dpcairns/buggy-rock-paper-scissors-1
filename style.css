@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(68, 94, 180);
+    color: rgb(12, 12, 63);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    width: 300px;
+    display: inline-block;
+}
+
+h1 {
+    text-align: left;   
+    color: white; 
+    border: 35px solid rgb(24, 24, 70);
+    padding: 50px 15px 25px 25px;
+    font-size: 70px;
+    margin: 50px 30px;
+    width: 450px;
+}
+
+section.instructions {
+    display: inline-block;
+    width: 700px;
+    padding-left: 300px; 
+}
+
+h2.instructions {
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+ul.instructions {
+    font-size: 20px;    
+    display: inline block;
+}
+
+label.instructions {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color: rgb(231, 200, 131);
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+#throw-result {
+    background-color: rgb(216, 149, 5);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    display: none;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#submit-button {
+    background-color: rgb(216, 149, 5);
+    color: rgb(24, 24, 70);
+    padding: 15px 25px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#submit-button:hover {
+    background-color: rgb(28, 19, 75);
+    color: rgb(202, 169, 98);
+}
+
+#results-box {
+    background-color: rgb(231, 200, 131);
+    padding: 30px;
+    font-size: 20px;
+    display: none;
+}
+img {
+    height: 190px;
+    border: 10px solid rgb(221, 171, 64);
+    vertical-align: middle;
+}
+
+.throw-summaries {
+    padding-left: 13%;
+    padding-right: 2%;
+}
+
+div.win-loss-counts-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    border: 5px dotted white;
+}
+
+.win-loss-counts {
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
