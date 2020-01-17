@@ -1,50 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(235, 181, 64);
-    margin: 0 auto;   
-    padding: 20px 20px; 
-    color: rgb(24, 24, 70);
+    background-color: rgb(68, 94, 180);
+    color: rgb(12, 12, 63);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 header {
-    text-align: center;   
+    width: 300px;
+    display: inline-block;
+}
+
+h1 {
+    text-align: left;   
     color: white; 
-    border: 5px solid rgb(24, 24, 70);
-    padding: 30px;
+    border: 35px solid rgb(24, 24, 70);
+    padding: 50px 15px 25px 25px;
+    font-size: 70px;
+    margin: 50px 30px;
+    width: 450px;
+}
+
+section.instructions {
+    display: inline-block;
+    width: 700px;
+    padding-left: 300px; 
+}
+
+h2.instructions {
     font-size: 30px;
-    margin: 30px;
+    font-style: italic;
+    margin-bottom: 0;
 }
 
-img {
-    width: 60%;
-    float: center;
+ul.instructions {
+    font-size: 20px;    
+    display: inline block;
 }
 
-button {
-    background-color: rgb(216, 149, 5);
-    color: rgb(24, 24, 70);
-    padding: 10px 20px;
-    margin: 20px auto;
-    border-radius: 5px;
-    border: none;
-    text-align: center;
-    position: absolute;
+label.instructions {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color: rgb(231, 200, 131);
+    text-transform: uppercase;
+    margin-left: 15px;
 }
 
-.results-box {
-    background-color: white;
-    color: rgb(216, 149, 5);
-    width: 80%;
-    margin: 100px auto;
-    padding: 10px 20px;
-    border-radius: 10px;
+label:hover {
+    cursor: pointer;
 }
 
 #throw-result {
-    background-color: rgb(235, 181, 64);
+    background-color: rgb(216, 149, 5);
     color: white;
     text-align: center;
-    padding: 20px;
-    border: 10px solid rgb(216, 149, 5);
+    font-size: 40px;
+    font-weight: bold;
+    display: none;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#submit-button {
+    background-color: rgb(216, 149, 5);
+    color: rgb(24, 24, 70);
+    padding: 15px 25px;
+    margin-top: 40px;
+    margin-bottom: 30px;
     border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#submit-button:hover {
+    background-color: rgb(28, 19, 75);
+    color: rgb(202, 169, 98);
+}
+
+img {
+    height: 190px;
+    border: 10px solid rgb(221, 171, 64);
+    vertical-align: middle;
+}
+
+#results-box {
+    background-color: rgb(231, 200, 131);
+    padding: 30px;
+    font-size: 20px;
+    display: none;
+}
+
+.throw-summaries {
+    padding-left: 60px;
+    padding-right: 20px;
+}
+
+div.win-loss-counts-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    border: 5px dotted white;
+}
+
+.win-loss-counts {
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
 }

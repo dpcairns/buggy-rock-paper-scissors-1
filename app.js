@@ -1,59 +1,39 @@
 import getRandomThrow from './get-random-throw.js';
 import checkResults from './check-results.js';
 
-// Get from DOM
-const userThrowDisplay = document.getElementById('user-choice');
-const computerThrowDisplay = document.getElementById('computer-choice');
+// Get elements from DOM
+const userThrowDisplay = document.getElementById('user-throw');
+const computerThrowDisplay = document.getElementById('computer-throw');
 const winsCountSpan = document.getElementById('wins-count');
 const lossesCountSpan = document.getElementById('loss-count');
 const drawsCountSpan = document.getElementById('draws-count');
 const throwResult = document.getElementById('throw-result');
 const submitButton = document.getElementById('submit-button');
-const resultsVisibility = document.getElementById('results-visibility');
+const resultsBox = document.getElementById('results-box');
 
-// Initialize State
+// Initialize state
 let wins = 0;
 let draws = 0;
 let losses = 0;
 
-// Add event listener
+// Add event listener to update states and modify DOM
 submitButton.addEventListener('click', () => {
     // Get user input from DOM and assign its value to a variable
     const userInput = document.querySelector('input:checked');
-    const userChoice = userInput.value;
+    const userthrow = userInput.value;
     
     // Get computer input from getRandomThrow
-    const computerChoice = getRandomThrow();
+    const computerthrow = getRandomThrow();
 
-    // Get result from checkResults and pass in user and computer choices
-    const result = checkResults(userChoice, computerChoice);
-
-    // // Display user throw
-    // if (userChoice === 'rock') {
-    //     userThrowDisplay.src = '/assets/rock.jpg';
-    // } else if (userChoice === 'paper') {
-    //     userThrowDisplay.src = '/assets/paper.jpg';
-    // } else if (userChoice.value === 'scissors') {
-    //     userThrowDisplay.src = '/assets/scissors.jpg';
-    // }
-    
-    // // Display computer throw
-    // if (computerChoice === 'rock') {
-    //     computerThrowDisplay.src = '/assets/rock.jpg';
-    // } else if (computerChoice === 'paper') {
-    //     computerThrowDisplay.src = '/assets/paper.jpg';
-    // } else if (computerChoice.value === 'scissors') {
-    //     computerThrowDisplay.src = '/assets/scissors.jpg';
-    // }
+    // Get result from checkResults and pass in user and computer throws
+    const result = checkResults(userthrow, computerthrow);
     
     // Display user throw
-    // userThrowDisplay.classList.remove('invisible');
-    let srcUserImage = `/assets/${userChoice}.jpg`;
+    let srcUserImage = `/assets/${userthrow}.jpg`;
     userThrowDisplay.src = srcUserImage;
     
     // Display computer throw
-    // computerThrowDisplay.classList.remove('invisible');
-    let srcComputerImage = `/assets/${computerChoice}.jpg`;
+    let srcComputerImage = `/assets/${computerthrow}.jpg`;
     computerThrowDisplay.src = srcComputerImage;    
     
     // Increment states and return result
@@ -74,5 +54,6 @@ submitButton.addEventListener('click', () => {
     lossesCountSpan.textContent = losses;
     
     // Make results section visible
-    resultsVisibility.classList.remove('hidden');
+    resultsBox.style.display = 'block';
+    throwResult.style.display = 'block';
 });

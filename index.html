@@ -11,49 +11,41 @@
 
 <body>
     <header>
-        <h1>Rock, Paper, Scissors</h1>
+        <h1>Rock<br>Paper<br>Scissors</h1>
     </header>
-    <section>
-        <h2>Rules</h2>
-        <ul>
+    <section class="instructions">
+        <h2 class="instructions">Can you beat the computer?</h2>
+        <ul class=instructions>
             <li>Rock beats scissors</li>
             <li>Scissors beats paper</li>
             <li>Paper beats rock</li>
         </ul>
-        <p>Can you beat the computer?</p>
-    </section>
-    <section class="user-options">
-        <h2>Make a selection</h2>
-        <label>
+        <button class="instructions" id="submit-button">Play the game</button><br>
+        <label class="instructions">
             Rock
-            <input name="user-options" value="rock" type="radio">
-            <!-- <img id="rock" class="radio-image" src="../assets/rock.jpg"> -->
+            <input name="instructions" value="rock" type="radio">
         </label>
-        <label>
-            Scissors
-            <input name="user-options" value="scissors" type="radio">
-            <!-- <img id="scissors" class="radio-image" src="../assets/scissors.jpg"> -->
-        </label>
-        <label>
+        <label class="instructions">
             Paper
-            <input name="user-options" value="paper" type="radio">
-            <!-- <img id="paper" class="radio-image" src="../assets/paper.jpg">     -->
+            <input name="instructions" value="paper" type="radio">
+        </label>
+        <label class="instructions">
+            Scissors
+            <input name="instructions" value="scissors" type="radio">
         </label>
     </section>
-    <button id="submit-button">Play</button>
-    <div class="results-box">
-        <section id="results-visibility" class="hidden">
-            <h3 id="user-summary">You threw: </h3>
-            <img id="user-choice" class="image" src="">
-            <h3 id="computer-summary">Computer threw: </h3>
-            <img id="computer-choice" class="image" src=""></img>
-            <h3 id="throw-result"></h3>
-            <h3>Totals: </h3>
-            <p>Wins: <span id="wins-count"></span></p>
-            <p>Losses: <span id="loss-count"></span></p>
-            <p>Draws: <span id="draws-count"></span></p>
-        </section>
-    </div>
+        <p id="throw-result"></p>
+    </section>
+    <section id="results-box">
+        <span class="throw-summaries" id="user-summary">You threw: </span><img id="user-throw" class="image" src="">
+        <span class="throw-summaries" id="computer-summary">Computer threw: </span>
+        <img id="computer-throw" class="image" src=""></img><br>
+        <div class="win-loss-counts-section">
+            <span class="win-loss-counts">Wins: <span id="wins-count"></span></span>
+            <span class="win-loss-counts">Losses: <span id="loss-count"></span></span>
+            <span class="win-loss-counts">Draws: <span id="draws-count"></span></span>
+        </div>
+    </section>
     <script type="module" src="app.js"></script>
 </body>
 </html>
