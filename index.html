@@ -14,36 +14,37 @@
         <h1>Rock<br>Paper<br>Scissors</h1>
     </header>
     <section class="instructions">
-        <h2 class="instructions">Can you beat the computer?</h2>
-        <ul class=instructions>
+        <h2>Can you beat the computer?</h2>
+        <ul>
             <li>Rock beats scissors</li>
             <li>Scissors beats paper</li>
             <li>Paper beats rock</li>
         </ul>
-        <button class="instructions" id="submit-button">Play the game</button><br>
-        <label class="instructions">
+        <button id="submit-button">Play the game</button><br>
+        <label>
             Rock
-            <input name="instructions" value="rock" type="radio">
+            <input type="radio" name="user-options" value="rock">
         </label>
-        <label class="instructions">
+        <label>
             Paper
-            <input name="instructions" value="paper" type="radio">
+            <input type="radio" name="user-options" value="paper">
         </label>
-        <label class="instructions">
+        <label>
             Scissors
-            <input name="instructions" value="scissors" type="radio">
+            <input type="radio" name="user-options" value="scissors">
         </label>
     </section>
-        <p id="throw-result"></p>
+        <p id="win-loss-draw"></p>
     </section>
     <section id="results-box">
-        <span class="throw-summaries" id="user-summary">You threw: </span><img id="user-throw" class="image" src="">
-        <span class="throw-summaries" id="computer-summary">Computer threw: </span>
-        <img id="computer-throw" class="image" src=""></img><br>
+        <span class="throw-summaries">You threw: </span><img id="user-throw" src="">
+        <span class="throw-summaries">Computer threw: </span>
+        <img id="computer-throw" src=""></img>
+        <button id="reset-button">Reset</button>
         <div class="win-loss-counts-section">
-            <span class="win-loss-counts">Wins: <span id="wins-count"></span></span>
-            <span class="win-loss-counts">Losses: <span id="loss-count"></span></span>
-            <span class="win-loss-counts">Draws: <span id="draws-count"></span></span>
+            <span id="wins-count"></span>
+            <span id="losses-count"></span>
+            <span id="draws-count"></span>
         </div>
     </section>
     <script type="module" src="app.js"></script>

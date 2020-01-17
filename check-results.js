@@ -1,4 +1,4 @@
-export default function checkResults(player, computer) {
+export function checkResults(player, computer) {
     if (player === computer) {
         return 'draw';
     } else if (player === 'rock' && computer === 'paper') {

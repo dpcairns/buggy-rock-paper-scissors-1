@@ -1,15 +1,15 @@
-import getRandomThrow from './get-random-throw.js';
-import checkResults from './check-results.js';
+import { getRandomThrow } from './get-random-throw.js';
+import { checkResults } from './check-results.js';
+import { throwImageDisplay } from './throw-img-display.js';
+import { makeVisible } from './make-results-visible.js';
+import { displayResultsCounts } from './display-result-counts.js';
+import { makeInvisible } from './make-results-invisible.js';
 
 // Get elements from DOM
-const userThrowDisplay = document.getElementById('user-throw');
-const computerThrowDisplay = document.getElementById('computer-throw');
-const winsCountSpan = document.getElementById('wins-count');
-const lossesCountSpan = document.getElementById('loss-count');
-const drawsCountSpan = document.getElementById('draws-count');
-const throwResult = document.getElementById('throw-result');
-const submitButton = document.getElementById('submit-button');
 const resultsBox = document.getElementById('results-box');
+const winLossDraw = document.getElementById('win-loss-draw');
+const submitButton = document.getElementById('submit-button');
+const resetButton = document.getElementById('reset-button');
 
 // Initialize state
 let wins = 0;
@@ -20,40 +20,37 @@ let losses = 0;
 submitButton.addEventListener('click', () => {
     // Get user input from DOM and assign its value to a variable
     const userInput = document.querySelector('input:checked');
-    const userthrow = userInput.value;
+    const userThrow = userInput.value;
     
     // Get computer input from getRandomThrow
-    const computerthrow = getRandomThrow();
+    const computerThrow = getRandomThrow();
 
     // Get result from checkResults and pass in user and computer throws
-    const result = checkResults(userthrow, computerthrow);
-    
-    // Display user throw
-    let srcUserImage = `/assets/${userthrow}.jpg`;
-    userThrowDisplay.src = srcUserImage;
-    
-    // Display computer throw
-    let srcComputerImage = `/assets/${computerthrow}.jpg`;
-    computerThrowDisplay.src = srcComputerImage;    
+    const result = checkResults(userThrow, computerThrow);
     
     // Increment states and return result
     if (result === 'draw') {
         draws++;
-        throwResult.textContent = `It's a draw!`;
+        winLossDraw.textContent = `It's a draw!`;
     } else if (result === 'win') {
         wins++;
-        throwResult.textContent = 'You won!';
+        winLossDraw.textContent = 'You won!';
     } else if (result === 'lose') {
         losses++;
-        throwResult.textContent = 'You lost.';
+        winLossDraw.textContent = 'You lost.';
     }
     
-    // Send results
-    winsCountSpan.textContent = wins;
-    drawsCountSpan.textContent = draws;
-    lossesCountSpan.textContent = losses;
-    
-    // Make results section visible
-    resultsBox.style.display = 'block';
-    throwResult.style.display = 'block';
+    throwImageDisplay(userThrow, computerThrow);
+    makeVisible(resultsBox, winLossDraw);
+    displayResultsCounts(wins, draws, losses);
+});
+
+// Add event listener to reset button
+resetButton.addEventListener('click', () => {
+    wins = 0;
+    draws = 0;
+    losses = 0;
+
+    displayResultsCounts(wins, draws, losses);
+    makeInvisible(resultsBox, winLossDraw);
 });

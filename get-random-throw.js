@@ -1,5 +1,5 @@
-export default function getRandomThrow() {
-    const randomNumber = (Math.floor(Math.random() * 3));
+export function getRandomThrow() {
+    const randomNumber = Math.floor(Math.random() * 3);
     return assignThrow(randomNumber);
 }
 
