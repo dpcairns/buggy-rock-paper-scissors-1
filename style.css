@@ -86,22 +86,21 @@ label:hover {
     color: rgb(202, 169, 98);
 }
 
-img {
-    height: 190px;
-    border: 10px solid rgb(221, 171, 64);
-    vertical-align: middle;
-}
-
 #results-box {
     background-color: rgb(231, 200, 131);
     padding: 30px;
     font-size: 20px;
     display: none;
 }
+img {
+    height: 190px;
+    border: 10px solid rgb(221, 171, 64);
+    vertical-align: middle;
+}
 
 .throw-summaries {
-    padding-left: 60px;
-    padding-right: 20px;
+    padding-left: 13%;
+    padding-right: 2%;
 }
 
 div.win-loss-counts-section {
