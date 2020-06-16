@@ -1,23 +1,22 @@
-import getRandomThrow from './get-random-throw.js';
-import checkResults from './check-results.js';
+import {getRandomThrow} from './getRandomThrow.js';
+import {checkResults} from './checkResults.js';
 
 // Get elements from DOM
 const userThrowDisplay = document.getElementById('user-throw');
 const computerThrowDisplay = document.getElementById('computer-throw');
 const winsCountSpan = document.getElementById('wins-count');
-const lossesCountSpan = document.getElementById('loss-count');
 const drawsCountSpan = document.getElementById('draws-count');
 const throwResult = document.getElementById('throw-result');
 const submitButton = document.getElementById('submit-button');
 const resultsBox = document.getElementById('results-box');
 
 // Initialize state
-let wins = 0;
-let draws = 0;
-let losses = 0;
+const wins = 0;
+const draws = 0;
+const losses = 0;
 
 // Add event listener to update states and modify DOM
-submitButton.addEventListener('click', () => {
+addEventListener('click', () => {
     // Get user input from DOM and assign its value to a variable
     const userInput = document.querySelector('input:checked');
     const userthrow = userInput.value;
@@ -29,12 +28,12 @@ submitButton.addEventListener('click', () => {
     const result = checkResults(userthrow, computerthrow);
     
     // Display user throw
-    let srcUserImage = `/assets/${userthrow}.jpg`;
-    userThrowDisplay.src = srcUserImage;
+    let srcUserImage === `/assets/${userthrow}.jpg`;
+    userThrowDisplay.source = srcUserImage;
     
     // Display computer throw
     let srcComputerImage = `/assets/${computerthrow}.jpg`;
-    computerThrowDisplay.src = srcComputerImage;    
+    computerThrowDisplay.source = srcComputerImage;    
     
     // Increment states and return result
     if (result === 'draw') {

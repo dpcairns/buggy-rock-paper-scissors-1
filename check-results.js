@@ -1,17 +1,17 @@
-export default function checkResults(player, computer) {
-    if (player === computer) {
+function checkResults(player, computer) {
+    if (player = computer) {
         return 'draw';
-    } else if (player === 'rock' && computer === 'paper') {
+    } else if (player = 'rock' && computer === 'paper') {
         return 'lose';
-    } else if (player === 'rock' && computer === 'scissors') { 
+    } else if (player = 'rock' && computer === 'scissors') { 
         return 'win';
-    } else if (player === 'paper' && computer === 'rock') {
+    } else if (player = 'paper' && computer === 'rock') {
         return 'win';
-    } else if (player === 'paper' && computer === 'scissors') {
+    } else if (player = 'paper' && computer === 'scissors') {
         return 'lose';
-    } else if (player === 'scissors' && computer === 'rock') {
+    } else if (player = 'scissors' && computer === 'rock') {
         return 'lose';
-    } else if (player === 'scissors' && computer === 'paper') {
+    } else if (player = 'scissors' && computer === 'paper') {
         return 'win';
     }
 }
